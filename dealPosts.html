@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kellogg Deals</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div>
+  
+<!-- Title  -->
+    <div class="flex">
+      <h1 class="w-full text-center m-5">
+        <a>
+          <span>Kellogg Deals</span>
+        </a>
+      </h1>
+    </div>
+
+    <div class = "flex">
+<!-- Home Button to bring back to index.html (use class "home")-->
+    <button class="home block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5" href = index.html >Home</button>
+
+<!-- Sign out Button (use class "sign-out") -->
+    <button class="sign-out block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5 ">Sign Out</button>
+
+    </div>
+
+    <!-- User input for Deal posts  -->
+    <h1 class="text-center">Deal Details</h1>
+
+    <form netlify class= "p-8 text-center">
+        <label class="block mt-4 font-bold" for="deal title">Deal Title</label>
+        <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="deal title" name="deal title">
+      
+        <label class="block mt-4 font-bold" for="description">Description</label>
+        <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="description" name="description">
+
+        <label class="block mt-4 font-bold" for="business">Business</label>
+        <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="business" name="business">
+      
+        <label class="block mt-4 font-bold" for="location">Location</label>
+        <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="location" name="location">
+
+        <label class="block mt-4 font-bold" for="price">Price</label>
+        <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="price" name="price">
+
+        <label class="block mt-4 font-bold" for="image">Image URL</label>
+        <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="image" name="image">
+
+        <button class="block mt-4 text-white bg-purple-500 rounded px-4 py-2">Post Deal</button>
+      </form>
+
+  </div>
+</body>
+
+</html>
