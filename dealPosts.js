@@ -49,6 +49,8 @@ submitButton.addEventListener(`click`,async function(event) {
 
  let response = await fetch(url)
 
+ location.reload()
+
 })
      } else {
 
@@ -88,7 +90,7 @@ submitButton.addEventListener(`click`,async function(event) {
   
       <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Name: ${dealBusiness}</div>
   
-      <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">${dealDescription}</div>
+      <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">Description: ${dealDescription}</div>
   
      <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Location: ${dealLocation}</div>
   

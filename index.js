@@ -49,7 +49,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
       let dealActive = deal.active
       let dealBusiness = deal.business
       let dealTitle = deal.dealTitle
-      let dealDescription = deal.dealDescription
+      let dealDescription = deal.description
       let dealUpvotes = deal.upVotes
       let dealDownvotes = deal.downVotes
       let dealImage = deal.imageUrl 
@@ -65,7 +65,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
     <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Name: ${dealBusiness}</div>
 
-    <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">${dealDescription}</div>
+    <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">Description: ${dealDescription}</div>
 
    <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Location: ${dealLocation}</div>
 
@@ -163,7 +163,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     
         <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Name: ${dealBusiness}</div>
     
-        <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">${dealDescription}</div>
+        <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">Description: ${dealDescription}</div>
     
        <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Location: ${dealLocation}</div>
     
