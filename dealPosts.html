@@ -22,10 +22,10 @@
 
     <div class = "flex float-right">
 <!-- Home Button to bring back to index.html (use class "home")-->
-    <button class="home block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5" href = index.html >Home</button>
+<a class="home block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5" href="index.html">Home</a>
 
 <!-- Sign out Button (use class "sign-out") -->
-    <button class="sign-out block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5 ">Sign Out</button>
+    <button class="sign-in-or-sign-out block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5 ">Sign Out</button>
     </div>
 
     <br> 
@@ -36,13 +36,13 @@
     <div>
     <!-- User input for Deal posts  -->
     
-    <form netlify class= "p-8 text-center">
+    <form class= "p-8 text-center">
         
         <h1>Deal Details</h1>
     
         <label class="block mt-4 font-bold" for="deal title">Deal Title</label>
         <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
-        focus:border-purple-500" type="text" id="deal title" name="deal title">
+        focus:border-purple-500" type="text" id="dealTitle" name="dealTitle">
       
         <label class="block mt-4 font-bold" for="description">Description</label>
         <input class="p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
@@ -60,14 +60,38 @@
         <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
         focus:border-purple-500" type="text" id="price" name="price">
 
+        <label class="block mt-4 font-bold" for="time">Time Used</label>
+        <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
+        focus:border-purple-500" type="text" id="time" name="time">
+
         <label class="block mt-4 font-bold" for="image">Image URL</label>
         <input class=" p-2 w-64 border border-gray-400 rounded shadow-xl focus:outline-none focus:ring-purple-500
         focus:border-purple-500" type="text" id="image" name="image">
 
-        <button class="block mt-4 text-white bg-purple-500 rounded px-4 py-2">Post Deal</button>
+        <button class="post-deal-button block mt-4 text-white bg-purple-500 rounded px-4 py-2">Submit</button>
       </form>
     </div>
   </div>
+   <!-- Put the Firebase config here -->
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+  <!-- Firebase Auth -->
+  <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/ui/4.7.3/firebase-ui-auth.js"></script>
+
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyCZV7_mlX1rYd2Vo_EFPbMHoJrCK9MXnQ0",
+      authDomain: "kiei-451-f0745.firebaseapp.com",
+      projectId: "kiei-451-f0745",
+      storageBucket: "kiei-451-f0745.appspot.com",
+      messagingSenderId: "707691730466",
+      appId: "1:707691730466:web:7b755b6d3d8e78ea541c7b"} // replaced with Tom's firebase config object
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="dealPosts.js"></script>
 </body>
 
 </html>

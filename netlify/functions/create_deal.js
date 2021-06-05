@@ -27,6 +27,8 @@ exports.handler = async function(event) {
   // create a new variable to hold the active status and set it to true
   let active = true
 
+  //console.log(`hello from backend`)
+
   // perform a query to get the businesses with the same name as passed to the function
   let businessQuery = await db.collection(`businesses`).where(`businessName`, `==`, businessName).get()
 
@@ -46,8 +48,8 @@ exports.handler = async function(event) {
     dealTitle: dealTitle,
     imgUrl: imgUrl,
     description: description,
-    time: time,
     price: price,
+    time: time,
     location: location,
     active: active,
     businessId: businessId,
@@ -55,11 +57,13 @@ exports.handler = async function(event) {
     })
   }
 
+  
   //create a new deal using the existing business' id
   else{
     // get the business data from the business query
     let business = businessQuery.docs
     
+   // console.log(`business: %o`, business)
     //create a variable to store the busniness id
     let businessId
 
@@ -69,16 +73,17 @@ exports.handler = async function(event) {
       businessId = business[i].id
     }
 
-    //console.log(businessId)
+   // console.log(businessId)
+   
 
     // create a new deal, wait for it to return
    await db.collection('deals').add({
     dealTitle: dealTitle,
     imgUrl: imgUrl,
     description: description,
-    time: time,
     price: price,
     location: location,
+    time: time,
     active: active,
     businessId: businessId,
     created: firebase.firestore.FieldValue.serverTimestamp()
