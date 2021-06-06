@@ -1,58 +1,61 @@
 firebase.auth().onAuthStateChanged(async function(user) {
   
-    if (user) {
+  if (user) {
         
-        let signOutButton = document.querySelector(`.sign-in-or-sign-out`)
+    let signOutButton = document.querySelector(`.sign-in-or-sign-out`)
 
-        // handle the sign out button click
-   signOutButton.addEventListener(`click`, function(event) {
-     // sign out of firebase authentication
-     firebase.auth().signOut()
+    // handle the sign out button click
+    signOutButton.addEventListener(`click`, function(event) {
+      // sign out of firebase authentication
+      firebase.auth().signOut()
 
-     // redirect to the sign out page
-        document.location.href = `index.html`})
+      // redirect to the sign out page
+      document.location.href = `index.html`})
         
-let submitButton = document.querySelector(`.post-deal-button`)
+    let submitButton = document.querySelector(`.post-deal-button`)
 
-submitButton.addEventListener(`click`,async function(event) {
-  event.preventDefault()
+    submitButton.addEventListener(`click`,async function(event) {
+      event.preventDefault()
 
-  let dealTitleInput = document.querySelector(`#dealTitle`)
+      let dealTitleInput = document.querySelector(`#dealTitle`)
 
-  let dealTitle = dealTitleInput.value
+      let dealTitle = dealTitleInput.value
 
-  let descriptionInput = document.querySelector(`#description`)
+      let descriptionInput = document.querySelector(`#description`)
 
-  let description = descriptionInput.value
+      let description = descriptionInput.value
 
-  let businessInput = document.querySelector(`#business`)
+      let businessInput = document.querySelector(`#business`)
 
-  let businessName = businessInput.value
+      let businessName = businessInput.value
 
-  let locationInput = document.querySelector(`#location`)
+      let locationInput = document.querySelector(`#location`)
 
-  let location = locationInput.value
+      let location = locationInput.value
 
-  let priceInput = document.querySelector(`#price`)
+      let priceInput = document.querySelector(`#price`)
 
-  let price = priceInput.value
+      let price = priceInput.value
 
-  let timeInput = document.querySelector(`#time`)
+      let timeInput = document.querySelector(`#time`)
 
-  let time = timeInput.value
+      let time = timeInput.value
 
-  let imageInput = document.querySelector(`#image`)
+      let imageInput = document.querySelector(`#image`)
 
-  let imgUrl = imageInput.value
+      let imgUrl = imageInput.value
 
- let url = `/.netlify/functions/create_deal?dealTitle=${dealTitle}&description=${description}&businessName=${businessName}&location=${location}&price=${price}&imgUrl=${imgUrl}&time=${time}`
+      let url = `/.netlify/functions/create_deal?dealTitle=${dealTitle}&description=${description}&businessName=${businessName}&location=${location}&price=${price}&imgUrl=${imgUrl}&time=${time}`
 
- let response = await fetch(url)
+      let response = await fetch(url)
 
- location.reload()
+      //redirect to the home page
+      document.location.href = `index.html`
 
-})
-     } else {
+    })
+  } 
+  
+  else {
 
       // build URL for deals API 
       let url = `/.netlify/functions/deals`

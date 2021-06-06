@@ -8,7 +8,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
       <button class="text-pink-500 underline sign-out">Sign Out</button>`
 
       //post deal button for signed in user
-    document.querySelector(`.post-deal`).innerHTML = `<button class="text-white-500">Post Deal</button>`
+    document.querySelector(`.post-deal`).innerHTML = `<button class=" block mt-4 text-white bg-purple-500 rounded px-4 py-2 m-5 text-white-500">Post Deal</button>`
 
     let linkToPostDeal = document.querySelector(`.post-deal`)
 
@@ -156,33 +156,34 @@ firebase.auth().onAuthStateChanged(async function(user) {
           let dealTime = deal.time
     
     
-        dealsDiv.insertAdjacentHTML(`beforeend`, 
-        `<h1 class="text-gray-600 font-bold text-xl text-center mt-12">Deal Title: ${dealTitle} </h1> 
+          dealsDiv.insertAdjacentHTML(`beforeend`, 
+            `<h1 class="text-gray-600 font-bold text-xl text-center mt-12">Deal Title: ${dealTitle} </h1> 
     
-        <div><img class="mx-auto w-full my-8" src=${dealImage}></div>
+            <div><img class="mx-auto w-full my-8" src=${dealImage}></div>
     
-        <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Name: ${dealBusiness}</div>
+            <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Name: ${dealBusiness}</div>
     
-        <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">Description: ${dealDescription}</div>
+            <div class="text-center font-bold border-4 rounded-xl p-4 border-blue-500 mt-4 mr-2">Description: ${dealDescription}</div>
     
-       <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Location: ${dealLocation}</div>
+            <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Location: ${dealLocation}</div>
     
-       <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Price: ${dealPrice}</div>
+            <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Price: ${dealPrice}</div>
     
-       <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Time Used: ${dealTime}</div>
-       `
-     )
+            <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Time Used: ${dealTime}</div>
+            `
+          )
     
-     if(dealActive == true) {
-      dealsDiv.insertAdjacentHTML(`beforeend`, 
-      `<div class="text-center font-bold border-4 rounded-xl p-2 border-green-500 mt-4 mr-2 ">Deal is Active</div>`)
+          if(dealActive == true) {
+            dealsDiv.insertAdjacentHTML(`beforeend`, 
+            `<div class="text-center font-bold border-4 rounded-xl p-2 border-green-500 mt-4 mr-2 ">Deal is Active</div>`)
+          } 
+          
+          else {
+            dealsDiv.insertAdjacentHTML(`beforeend`, 
+            `<div class="text-center font-bold border-4 rounded-xl p-2 border-red-500 mt-4 mr-2 ">Deal is not Active</div>`)
+          }
     
-     } else {
-      dealsDiv.insertAdjacentHTML(`beforeend`, 
-      `<div class="text-center font-bold border-4 rounded-xl p-2 border-red-500 mt-4 mr-2 ">Deal is not Active</div>`)
-     }
-    
-    }
+        }
 
     // Signed out
     console.log('signed out')
