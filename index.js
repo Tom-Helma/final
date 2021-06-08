@@ -71,7 +71,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
 
    <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Price: ${dealPrice}</div>
 
-   <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Time Used: ${dealTime}</div>
+   <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Time: ${dealTime}</div>
    
    <div class="text-3xl md:mx-0 mx-4 mb-4">
    <button id="upvote-button-${dealId}">⬆</button>${dealUpvotes}</div>
@@ -169,7 +169,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
     
             <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Price: ${dealPrice}</div>
     
-            <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Time Used: ${dealTime}</div>
+            <div class="text-center font-bold border-4 rounded-xl p-2 border-blue-500 mt-4 mr-2 ">Time: ${dealTime}</div>
             `
           )
     
