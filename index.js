@@ -147,7 +147,7 @@ firebase.auth().onAuthStateChanged(async function(user) {
           let dealActive = deal.active
           let dealBusiness = deal.business
           let dealTitle = deal.dealTitle
-          let dealDescription = deal.dealDescription
+          let dealDescription = deal.description
           let dealUpvotes = deal.upVotes
           let dealDownvotes = deal.downVotes
           let dealImage = deal.imageUrl 
